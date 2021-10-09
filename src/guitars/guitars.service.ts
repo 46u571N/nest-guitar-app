@@ -23,7 +23,8 @@ export class GuitarsService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} guitar`;
+    return this.guitarRepository.findOne(id);
+
   }
 
   update(id: number, updateGuitarDto: UpdateGuitarDto) {
