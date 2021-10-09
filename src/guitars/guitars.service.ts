@@ -19,7 +19,7 @@ export class GuitarsService {
   }
 
   findAll() {
-    return `This action returns all guitars`
+    return this.guitarRepository.find();
   }
 
   findOne(id: number) {
