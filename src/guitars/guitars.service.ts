@@ -17,7 +17,6 @@ export class GuitarsService {
   create(createGuitarDto: CreateGuitarDto) {
     const guitar: Guitar = this.guitarRepository.create(createGuitarDto);
     return this.guitarRepository.save(guitar);
-
   }
 
   findAll() {
