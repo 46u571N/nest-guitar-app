@@ -22,13 +22,13 @@ export class BrandsService {
     return this.brandRepository.find();
   }
 
-
   findOne(id: number) {
     return this.brandRepository.findOne(id);
   }
 
   update(id: number, updateBrandDto: UpdateBrandDto) {
-    return `This action updates a #${id} brand`;
+    this.brandRepository.update(id, updateBrandDto);
+    return this.brandRepository.findOne(id);
   }
 
   remove(id: number) {
