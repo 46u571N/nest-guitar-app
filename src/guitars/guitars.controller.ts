@@ -16,18 +16,12 @@ export class GuitarsController {
   constructor(private readonly guitarsService: GuitarsService) {}
 
   @Post()
-  create(
-    @Body() createGuitarDto: CreateGuitarDto,
-  ): Promise<
-    import('c:/Users/Administrador/tec-web-LS/nest-guitar-app/src/guitars/entities/guitar.entity').Guitar
-  > {
+  create(@Body() createGuitarDto: CreateGuitarDto){
     return this.guitarsService.create(createGuitarDto);
   }
 
   @Get()
-  findAll(): Promise<
-    import('c:/Users/Administrador/tec-web-LS/nest-guitar-app/src/guitars/entities/guitar.entity').Guitar[]
-  > {
+  findAll() {
     return this.guitarsService.findAll();
   }
 
