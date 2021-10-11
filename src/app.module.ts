@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Guitar } from './guitars/entities/guitar.entity';
 import { GuitarsModule } from './guitars/guitars.module';
+import { BrandsModule } from './brands/brands.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { GuitarsModule } from './guitars/guitars.module';
       entities: [Guitar],
       synchronize: true,
   }),
-  GuitarsModule],
+  GuitarsModule,
+  BrandsModule],
   controllers: [AppController],
   providers: [AppService],
 })
