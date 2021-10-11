@@ -7,6 +7,7 @@ import { Brand } from './entities/brand.entity';
 
 @Injectable()
 export class BrandsService {
+  
   constructor(
     @InjectRepository(Brand)
     private brandRepository: Repository<Brand>
@@ -22,7 +23,7 @@ export class BrandsService {
 
 
   findOne(id: number) {
-    return `This action returns a #${id} brand`;
+    return this.brandRepository.findOne(id);
   }
 
   update(id: number, updateBrandDto: UpdateBrandDto) {
