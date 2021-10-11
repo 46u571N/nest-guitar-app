@@ -32,6 +32,7 @@ export class BrandsService {
   }
 
   remove(id: number) {
+    this.brandRepository.delete(id);
     return `This action removes a #${id} brand`;
   }
 }
