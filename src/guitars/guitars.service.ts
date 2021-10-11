@@ -12,10 +12,12 @@ export class GuitarsService {
   constructor(
     @InjectRepository(Guitar)
     private guitarRepository: Repository<Guitar>
-  ) {}
+  ) { }
 
   create(createGuitarDto: CreateGuitarDto) {
-    return `This action adds a new guitar`;
+    const guitar: Guitar = this.guitarRepository.create(createGuitarDto);
+    return this.guitarRepository.save(guitar);
+
   }
 
   findAll() {

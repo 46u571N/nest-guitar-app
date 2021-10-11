@@ -5,15 +5,15 @@ import { UpdateGuitarDto } from './dto/update-guitar.dto';
 
 @Controller('guitars')
 export class GuitarsController {
-  constructor(private readonly guitarsService: GuitarsService) {}
+  constructor(private readonly guitarsService: GuitarsService) { }
 
   @Post()
-  create(@Body() createGuitarDto: CreateGuitarDto) {
+  create(@Body() createGuitarDto: CreateGuitarDto): Promise<import("c:/Users/Administrador/tec-web-LS/nest-guitar-app/src/guitars/entities/guitar.entity").Guitar> {
     return this.guitarsService.create(createGuitarDto);
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<import("c:/Users/Administrador/tec-web-LS/nest-guitar-app/src/guitars/entities/guitar.entity").Guitar[]> {
     return this.guitarsService.findAll();
   }
 

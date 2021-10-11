@@ -3,18 +3,18 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Guitar {
     @PrimaryGeneratedColumn()
-    private id: number;
+    id: number;
 
     @Column()
-    private name: string;
+    name: string;
 
     @Column()
-    private desciption: string;
+    description: string;
 
     @Column()
-    private price: number;
+    price: number;
 
     @Column()
-    private idmarca: number;
+    idmarca: number;
 }
 

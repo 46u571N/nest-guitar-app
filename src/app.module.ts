@@ -12,7 +12,7 @@ import { GuitarsModule } from './guitars/guitars.module';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '123456',
+      password: '1',
       database: 'guitardb',
       entities: [Guitar],
       synchronize: true,
