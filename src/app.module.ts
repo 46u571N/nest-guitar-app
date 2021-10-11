@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { Guitar } from './guitars/entities/guitar.entity';
 import { GuitarsModule } from './guitars/guitars.module';
 import { BrandsModule } from './brands/brands.module';
+import { Brand } from './brands/entities/brand.entity';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { BrandsModule } from './brands/brands.module';
       username: 'postgres',
       password: '1',
       database: 'guitardb',
-      entities: [Guitar],
+      entities: [Guitar, Brand],
       synchronize: true,
   }),
   GuitarsModule,

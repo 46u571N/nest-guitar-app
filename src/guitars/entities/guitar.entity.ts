@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Brand } from "src/brands/entities/brand.entity";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Guitar {
@@ -16,5 +17,9 @@ export class Guitar {
 
     @Column()
     idmarca: number;
+
+    @ManyToOne(() => Brand, brand => brand.guitars)
+    brand: Brand[];
+
 }
 
