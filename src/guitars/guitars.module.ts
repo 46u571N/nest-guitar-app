@@ -7,6 +7,6 @@ import { Guitar } from './entities/guitar.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Guitar])],
   controllers: [GuitarsController],
-  providers: [GuitarsService]
+  providers: [GuitarsService],
 })
 export class GuitarsModule {}

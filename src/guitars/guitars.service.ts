@@ -26,11 +26,11 @@ export class GuitarsService {
 
   findOne(id: number) {
     return this.guitarRepository.findOne(id);
-
   }
 
   update(id: number, updateGuitarDto: UpdateGuitarDto) {
-    return `This action updates a #${id} guitar`;
+    this.guitarRepository.update(id, updateGuitarDto);
+    return this.guitarRepository.findOne(id);
   }
 
   remove(id: number) {
