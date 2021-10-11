@@ -34,6 +34,7 @@ export class GuitarsService {
   }
 
   remove(id: number) {
+    this.guitarRepository.delete(id);
     return `This action removes a #${id} guitar`;
   }
 }
