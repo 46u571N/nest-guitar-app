@@ -20,11 +20,11 @@ export class GuitarsService {
   }
 
   findAll() {
-    return this.guitarRepository.find();
+    return this.guitarRepository.find({relations:['brand']}) ;
   }
 
   findOne(id: number) {
-    return this.guitarRepository.findOne(id);
+    return this.guitarRepository.findOne(id,{relations:['brand']});
   }
 
   update(id: number, updateGuitarDto: UpdateGuitarDto) {
