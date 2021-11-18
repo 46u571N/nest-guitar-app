@@ -11,13 +11,12 @@ import { Brand } from './brands/entities/brand.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '1',
-      database: 'guitardb',
+      url: process.env.DATABASE_URL,
       entities: [Guitar, Brand],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
   }),
   GuitarsModule,
   BrandsModule],
