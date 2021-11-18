@@ -23,7 +23,7 @@ export class BrandsService {
   }
 
   findOne(id: number) {
-    return this.brandRepository.findOne(id);
+    return this.brandRepository.findOneOrFail(id);
   }
 
   update(id: number, updateBrandDto: UpdateBrandDto) {

@@ -29,7 +29,7 @@ export class GuitarsService {
 
   update(id: number, updateGuitarDto: UpdateGuitarDto) {
     this.guitarRepository.update(id, updateGuitarDto);
-    return this.guitarRepository.findOne(id);
+    return this.guitarRepository.findOne(id,{relations:['brand']});
   }
 
   remove(id: number) {
