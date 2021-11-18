@@ -15,9 +15,16 @@ export class Guitar {
     @Column()
     price: number;
 
+    @Column()
+    image: string;
+
+    @Column()
+    clearance: boolean;
+
     @ManyToOne(() => Brand, brand => brand.guitars)
-    @JoinColumn({name: 'brandId'})
-    brand : Brand;
+    @JoinColumn({ name: 'brandId' })
+    brand: Brand;
+
 
 }
 

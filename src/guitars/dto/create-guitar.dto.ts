@@ -4,5 +4,7 @@ export class CreateGuitarDto {
      name: string;
      description: string;
      price: number;
+     image: string;
+     clearance: boolean;
      idmarca: number;
 }
