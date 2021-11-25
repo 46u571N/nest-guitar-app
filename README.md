@@ -24,7 +24,7 @@
 
 ## Description
 
-Demo:(https://tec-web-guitar-app.herokuapp.com/guitars) https://tec-web-guitar-app.herokuapp.com/guitars
+Demo: https://tec-web-guitar-app.herokuapp.com/guitars
 
 ## Installation
 ```bash
