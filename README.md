@@ -24,9 +24,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Demo:(https://tec-web-guitar-app.herokuapp.com/guitars) https://tec-web-guitar-app.herokuapp.com/guitars
 
 ## Installation
+```bash
+$ git clone https://github.com/46u571N/nest-guitar-app.git
+```
 
 ```bash
 $ npm install
