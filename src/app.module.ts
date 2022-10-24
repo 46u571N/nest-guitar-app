@@ -14,9 +14,9 @@ import { Brand } from './brands/entities/brand.entity';
       url: process.env.DATABASE_URL,
       entities: [Guitar, Brand],
       synchronize: true,
-      ssl: {
+      /*ssl: {
         rejectUnauthorized: false,
-      },
+      },*/
   }),
   GuitarsModule,
   BrandsModule],
