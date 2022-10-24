@@ -1,14 +1,13 @@
 version: '3.9'
 services:
   nest:
-    build: .
-    #entrypoint: yarn start:dev
+    build: . 
+    
     links:
       - postgres
     ports:
-      - '3000:3000'
-    #volumes:
-     # - .:/usr/src/app   # mapeo todo (.) a usr src app 
+      - '3000:3000' 
+
     env_file:
       - .env
 
