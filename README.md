@@ -24,7 +24,11 @@
 
 ## Description
 
-Demo: https://tec-web-guitar-app.herokuapp.com/guitars
+Demo: https://nest-ci-app.onrender.com/guitars
+
+## Docker image
+
+You can download it with: "docker push santos2022/nest-guitar-app" , or or directly from the repository in Docker Hub https://hub.docker.com/repositories/santos2022
 
 ## Installation
 ```bash
